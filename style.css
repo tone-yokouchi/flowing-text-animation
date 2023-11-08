@@ -1,0 +1,57 @@
+.p-flowingText {
+  overflow: hidden;
+}
+.p-flowingText__inner {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  left: 15%;
+}
+
+.p-flowingText__text {
+  font-size: min(25vw, 270px);
+  line-height: 1;
+  white-space: nowrap;
+  font-weight: bold;
+}
+
+.js-flowingLoop .p-flowingText__text {
+  -webkit-animation: textScrollAnimation 12s linear infinite;
+  animation: textScrollAnimation 12s linear infinite;
+}
+
+.p-flowingText__alphabet {
+  display: inline-block;
+  position: relative;
+  font-size: inherit;
+  line-height: inherit;
+}
+.p-flowingText__alphabet.break {
+  margin-right: 0.2em;
+}
+.p-flowingText__alphabet.last {
+  margin-right: 0.3em;
+}
+
+@-webkit-keyframes textScrollAnimation {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes textScrollAnimation {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
